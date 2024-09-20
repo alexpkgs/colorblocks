@@ -1,23 +1,23 @@
-# Define the compiler
+# gcc
 CC = gcc
 
-# Define the target executable
-TARGET = color
+# name of the exec
+TARGET = colorblocks
 
-# Define source files
+# src file
 SRC = main.c
 
-# Compiler flags
+# flags
 CFLAGS = -Wall -Wextra
 
 # Default rule to compile the program
 all: $(TARGET)
 
-# Rule to compile the target
+# rule to compile
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
-# Clean rule to remove the compiled files
+# remove/clean
 clean:
 	rm -f $(TARGET)
 
